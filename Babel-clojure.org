@@ -83,8 +83,31 @@ lein run
 
 ** Conclusion
 
-Now let's get this code up to github first. First this org file should be inside the code project. And then git push the thing.
+Now let's get this code up to github first. First this org file should be inside the code project. 
 #+BEGIN_SRC shell 
 cp ./Babel-clojure.org ~/sandbox/babel-clj
 #+END_SRC
 
+And then git push the thing.
+#+BEGIN_SRC shell :dir ~/sandbox/babel-clj/
+git init
+git add -A
+git commit -am"first commit"
+git remote add origin git@github.com:gzmask/Babel-clojure.git
+git push -u origin master
+#+END_SRC
+
+#+RESULTS:
+| Initialized | empty         |      Git | repository                   | in            | /Users/shulanglei/sandbox/babel-clj/.git/ |        |        |        |      |         |
+| [master     | (root-commit) | 3c308a7] | first                        | commit        |                                           |        |        |        |      |         |
+| 9           | files         | changed, | 395                          | insertions(+) |                                           |        |        |        |      |         |
+| create      | mode          |   100644 | .gitignore                   |               |                                           |        |        |        |      |         |
+| create      | mode          |   100644 | Babel-clojure.org            |               |                                           |        |        |        |      |         |
+| create      | mode          |   100644 | CHANGELOG.md                 |               |                                           |        |        |        |      |         |
+| create      | mode          |   100644 | LICENSE                      |               |                                           |        |        |        |      |         |
+| create      | mode          |   100644 | README.md                    |               |                                           |        |        |        |      |         |
+| create      | mode          |   100644 | doc/intro.md                 |               |                                           |        |        |        |      |         |
+| create      | mode          |   100644 | project.clj                  |               |                                           |        |        |        |      |         |
+| create      | mode          |   100644 | src/babel_clj/core.clj       |               |                                           |        |        |        |      |         |
+| create      | mode          |   100644 | test/babel_clj/core_test.clj |               |                                           |        |        |        |      |         |
+| Branch      | master        |      set | up                           | to            | track                                     | remote | branch | master | from | origin. |
