@@ -80,3 +80,11 @@ lein run
 
 #+RESULTS:
 : Hello GzMask
+
+** Conclusion
+
+Now let's get this code up to github first. First this org file should be inside the code project. And then git push the thing.
+#+BEGIN_SRC shell 
+cp ./Babel-clojure.org ~/sandbox/babel-clj
+#+END_SRC
+
