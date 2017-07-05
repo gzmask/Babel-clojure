@@ -1,0 +1,82 @@
+* Literature Programming for Clojure with Babel and Spacemacs
+
+I've learned about literature programming years ago when I was studying for my Computer Science degree. Basically it is a way of programming to interwind narrative text and executable code, such that the order of the text is aimed at narrative purpose first, code execution logic second. Wherein traditional programming, often the case is that narrative comments complies to the order of the code blocks, making source code reading an unpleasent experience.
+
+Back in those days, I recall using something call "Noweb" to compile or generate the source once the file is done. A pdf and the related source code will then be produced. I used VIM, but the editing experience was pretty bad that I don't feel like I am actually letting my "flow of thoughts" generating executable code naturely. I ditched the whole idea of literature programming since then, and use something like Javadocs and the like for my documentation needs.
+
+Babel isn't a such thing. With Emacs REPL workflow empowered, literature programming with Babel became a fluent thing -- almost like writting a blog post. Then Spacemacs makes Emacs easier to use. Finally there is Clojure, a function programming language designed for REPL driven development while being a LISP, perfect match for Emacs.
+
+** Clojure project creation
+
+To create a Clojure project we need Leiningen. The Babel provided the Shell code for this. Enter ~<s~ and <tab> will generate the easy template for you.
+#+BEGIN_SRC shell
+lein new babel-clj
+#+END_SRC
+
+#+RESULTS:
+ Generating a project called babel-clj based on the 'default' template.                                                
+ The default template is intended for library projects not applications.                             
+ To see other templates (app plugin etc)  try `lein help new`. 
+
+Wait a second, where did I generated my project? 
+#+BEGIN_SRC shell
+pwd
+#+END_SRC
+
+#+RESULTS:
+: /Users/shulanglei/diary
+
+Wrong place. What do I do? ~:dir~ is what we need.
+
+#+BEGIN_SRC shell :dir ~/sandbox/
+lein new app babel-clj
+#+END_SRC
+
+#+RESULTS:
+: Generating a project called babel-clj based on the 'app' template.
+
+Let's start coding.
+
+** Clojure main function
+
+~:tangle~ can make the file generated. First we need cider-jack-in to start the repl. Let's start from fresh. ~,,~ is the key to eval a code block. ~org-babel-tangle~ will export the file.
+
+#+NAME: core.clj
+#+BEGIN_SRC clojure :tangle ~/sandbox/babel-clj/src/babel_clj/core.clj 
+(ns babel-clj.core
+  (:gen-class))
+#+END_SRC
+
+An awesome Clojure function.
+#+BEGIN_SRC clojure :tangle ~/sandbox/babel-clj/src/babel_clj/core.clj 
+  (defn helloworld
+    ([] (helloworld "No one"))
+    ([someone] (str "Hello " someone)))
+#+END_SRC
+
+#+RESULTS:
+: #'babel-clj.core/helloworld
+
+And now the main function.
+#+BEGIN_SRC clojure :tangle ~/sandbox/babel-clj/src/babel_clj/core.clj 
+  (defn -main []
+    (println (helloworld "GzMask")))
+#+END_SRC
+
+#+RESULTS:
+: #'babel-clj.core/-main
+
+Finally let's run the whole thing from shell.
+#+BEGIN_SRC shell :dir ~/sandbox/babel-clj/
+pwd
+#+END_SRC
+
+#+RESULTS:
+: /Users/shulanglei/sandbox/babel-clj
+
+#+BEGIN_SRC shell :dir ~/sandbox/babel-clj/
+lein run
+#+END_SRC
+
+#+RESULTS:
+: Hello GzMask
