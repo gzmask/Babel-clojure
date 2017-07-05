@@ -1,10 +1,10 @@
 * Literature Programming for Clojure with Babel and Spacemacs
 
-I've learned about literature programming years ago when I was studying for my Computer Science degree. Basically it is a way of programming to interwind narrative text and executable code, such that the order of the text is aimed at narrative purpose first, code execution logic second. Wherein traditional programming, often the case is that narrative comments complies to the order of the code blocks, making source code reading an unpleasent experience.
+I've learned about literature programming years ago when I was studying for my Computer Science degree. Basically it is a way of programming to interwind narrative text and executable code. The order of the text is aimed at narrative purpose first, code execution logic second. Where in traditional programming, often the case is narrative comments follows the order of code blocks, making source code reading an unpleasant experience.
 
-Back in those days, I recall using something call "Noweb" to compile or generate the source once the file is done. A pdf and the related source code will then be produced. I used VIM, but the editing experience was pretty bad that I don't feel like I am actually letting my "flow of thoughts" generating executable code naturely. I ditched the whole idea of literature programming since then, and use something like Javadocs and the like for my documentation needs.
+Back in those days, I recall using something call "Noweb" to compile or generate the source once the file is done. A pdf and the related source code will then be produced. I used VIM, but the editing experience was pretty bad that I don't feel like I am actually letting my "flow of thoughts" generating executable code naturally. I ditched the whole idea of literature programming since then, and use something like Javadocs and the like for my documentation needs.
 
-Babel isn't a such thing. With Emacs REPL workflow empowered, literature programming with Babel became a fluent thing -- almost like writting a blog post. Then Spacemacs makes Emacs easier to use. Finally there is Clojure, a function programming language designed for REPL driven development while being a LISP, perfect match for Emacs.
+Then I found Babel. Being Emacs REPL empowered, literature programming with Babel becames very fluent -- almost like writting a blog post. And Spacemacs makes Emacs awesome. Finally there is Clojure, a function programming language designed for REPL driven development while being a LISP, the loop is completed.
 
 ** Clojure project creation
 
